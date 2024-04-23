@@ -6,9 +6,9 @@ export default async function Home() {
     const allProducts = await GlobalApi.getProducts();
 
     return (
-        <div className='container'>
-            <MainSlider />
+        <div className='container'>            
             <PopularProducts allProducts={allProducts} />
+            <MainSlider />
         </div>
     );
 }
