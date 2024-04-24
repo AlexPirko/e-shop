@@ -9,5 +9,6 @@ const getProducts = () =>
         return resp.data;
     });
 const getCategory = () => axiosClient.get('/categories');
+const getProduct = () => axiosClient.get('/products/id');
 
-export default { getProducts, getCategory };
+export default { getProducts, getCategory, getProduct };

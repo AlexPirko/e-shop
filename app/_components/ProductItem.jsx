@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
 const ProductItem = ({ item }) => {
@@ -12,7 +13,12 @@ const ProductItem = ({ item }) => {
                 alt='image'
                 className='h-[220px] w-[300px] object-contain'
             />
-            <h3 className='text-lg'>{item?.title}</h3>
+            <Link
+                href={`/products/${item?.id}`}
+                passHref
+                legacyBehavior>
+                <h3 className='text-lg cursor-pointer'>{item?.title}</h3>
+            </Link>
             <h4 className='font-semibold'>${item?.price}</h4>
             <Button
                 className='mt-auto'
